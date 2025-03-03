@@ -17,9 +17,11 @@ set -e
 
 export PATH="${PATH}:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
-APP="$(basename "${0}")"
+#APP="$(basename "${0}")"
+APP="$(basename "$(pwd)")"
 HELPER_FILE="$(readlink -f "${BASH_SOURCE[0]}")"
-APP_DIR="${HOME}/code/nodejs/${APP}"
+#APP_DIR="${HOME}/Apps/${APP}"
+APP_DIR="$(pwd)"
 
 APP_FILE="${APP_DIR}/index.js"
 APP_PKG_LOCK="package-lock.json"
