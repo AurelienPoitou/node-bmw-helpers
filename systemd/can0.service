@@ -1,0 +1,13 @@
+[Unit]
+Description=Bring up CAN0 interface
+Requires=sys-subsystem-net-devices-can0.device
+After=sys-subsystem-net-devices-can0.device
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/ip link set can0 type can bitrate 1000000
+ExecStart=/sbin/ip link set can0 up
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
