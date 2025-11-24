@@ -11,7 +11,7 @@ WorkingDirectory = /usr/local/bmwi
 Environment = NODE_ENV=production
 Environment = NODE_PATH=/usr/local/bmwi/lib:/usr/local/bmwi/modules:/usr/local/bmwi/share:/usr/local/bmwi/node_modules:/usr/lib/node_modules
 
-ExecStart = /usr/bin/env node --title=bmwi-%i --throw-deprecation --trace-uncaught --trace-deprecation --trace-warnings . %i
+ExecStart = /usr/bin/env node --title=bmwi-ibus --throw-deprecation --trace-uncaught --trace-deprecation --trace-warnings . ibus
 
 Restart    = always
 RestartSec = 5
